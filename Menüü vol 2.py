@@ -1,4 +1,3 @@
-
 class Album():
 
     def __init__(self, albumi_nimi):
