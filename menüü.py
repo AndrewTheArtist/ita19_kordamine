@@ -1,6 +1,3 @@
-from Laul import Laul
-from Album import Album
-from Laulja import Laulja
 import csv
 #Failide lugemine tabelisse
 kogu_tabel = []
@@ -10,6 +7,7 @@ with open("Albumid", encoding="utf-8") as fail:
     csv_fail = csv.reader(fail, delimiter="\t")
     for rida in csv_fail:
         kogu_tabel.append(rida)
+
 
 #Teen funktsiooni otsi album, mis ostib failist sisestaud albumi nime ja prindib selle ekraanile
 def otsi_Album():
@@ -49,15 +47,12 @@ def osti_laulu_nime_järgi():
             print(rida[0], rida[1], rida[2])
 
 
-
-
-
 print("Sisesta 1 kui tahad ostida Albumi nime järgi")
 print("Sisesta 2 kui tahad ostida Esitaja järgi")
 print("Sisesta 3 kui tahad otsida aasta järgi")
 print("Sisesta 4 kui tahad ostida laulu nime järgi")
 
-scr=int(input("Sisesta siia:"))
+scr = int(input("Sisesta siia:"))
 
 if scr ==1:
     otsi_Album()
@@ -69,4 +64,4 @@ elif scr==4:
     osti_laulu_nime_järgi()
 
 else:
-    print("nüüd on jama majas")
+    print("Nüüd on jama majas")
